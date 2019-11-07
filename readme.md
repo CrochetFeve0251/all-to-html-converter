@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/crochetfeve0251/all-to-html-converter.svg?branch=master)]
