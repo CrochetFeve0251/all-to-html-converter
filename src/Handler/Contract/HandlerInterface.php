@@ -4,6 +4,8 @@
 namespace AllToHmlConverter\Handler\Contract;
 
 
+use AllToHmlConverter\Strategy\Strategy\contract\StrategyInterface;
+
 interface HandlerInterface
 {
     /**
@@ -18,5 +20,5 @@ interface HandlerInterface
      * @param string $file
      * @return string
      */
-    public function handle(string $file): string;
+    public function handle(string $file): StrategyInterface;
 }

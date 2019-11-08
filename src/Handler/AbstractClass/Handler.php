@@ -6,6 +6,7 @@ namespace AllToHmlConverter\Handler\AbstractClass;
 
 use AllToHmlConverter\Handler\Contract\HandlerInterface;
 use AllToHmlConverter\Handler\Exception\CanTreatFileException;
+use AllToHmlConverter\Strategy\Strategy\contract\StrategyInterface;
 
 abstract class Handler implements HandlerInterface
 {
@@ -30,7 +31,7 @@ abstract class Handler implements HandlerInterface
      * @return string
      * @throws CanTreatFileException
      */
-    public function handle(string $file): string
+    public function handle(string $file): StrategyInterface
     {
         if ($this->nextHandler) {
             return $this->nextHandler->handle($file);
