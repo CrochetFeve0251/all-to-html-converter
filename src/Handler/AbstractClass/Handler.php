@@ -20,7 +20,7 @@ abstract class Handler implements HandlerInterface
      * @param HandlerInterface $handler
      * @return HandlerInterface
      */
-    public function setNext(HandlerInterface $handler): HandlerInterface
+    public function setNext(HandlerInterface $handler): void
     {
         $this->nextHandler = $handler;
     }
@@ -33,9 +33,8 @@ abstract class Handler implements HandlerInterface
      */
     public function handle(string $file): StrategyInterface
     {
-        if ($this->nextHandler) {
+        if ($this->nextHandler)
             return $this->nextHandler->handle($file);
-        }
         throw new CanTreatFileException("The file isn't one of the files supported");
     }
 }

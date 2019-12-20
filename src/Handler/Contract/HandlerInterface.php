@@ -13,7 +13,7 @@ interface HandlerInterface
      * @param HandlerInterface $handler
      * @return HandlerInterface
      */
-    public function setNext(HandlerInterface $handler): HandlerInterface;
+    public function setNext(HandlerInterface $handler): void;
 
     /**
      * Send a file to run the responsability chain
