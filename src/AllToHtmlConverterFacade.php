@@ -49,7 +49,7 @@ class AllToHtmlConverterFacade
     public static function convert(string $file, string $urlFile) {
         $handler = self::setUpHandlers();
         $context = new Context();
-        $context->setStrategy($handler->handle($file, $urlFile));
-        return $context->convertToHTML($file);
+        $context->setStrategy($handler->handle($file));
+        return $context->convertToHTML($file, $urlFile);
     }
 }

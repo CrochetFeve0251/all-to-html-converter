@@ -18,7 +18,8 @@ interface ContextInterface
     /**
      * convert the file to html
      * @param string $file
+     * @param string $urlFile
      * @return string
      */
-    public function convertToHTML(string $file): string;
+    public function convertToHTML(string $file, string $urlFile): string;
 }

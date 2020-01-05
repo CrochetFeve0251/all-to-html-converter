@@ -27,10 +27,11 @@ class Context implements ContextInterface
     /**
      * convert the file to html
      * @param string $file
+     * @param string $urlFile
      * @return string
      */
-    public function convertToHTML(string $file): string
+    public function convertToHTML(string $file, string $urlFile): string
     {
-       return $this->strategy->execute($file);
+       return $this->strategy->execute($file, $urlFile);
     }
 }
