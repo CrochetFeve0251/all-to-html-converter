@@ -43,12 +43,13 @@ class AllToHtmlConverterFacade
     /**
      * Convert a file to html and return its content in html
      * @param string $file
+     * @param string $urlFile
      * @return string
      */
-    public static function convert(string $file) {
+    public static function convert(string $file, string $urlFile) {
         $handler = self::setUpHandlers();
         $context = new Context();
-        $context->setStrategy($handler->handle($file));
+        $context->setStrategy($handler->handle($file, $urlFile));
         return $context->convertToHTML($file);
     }
 }
