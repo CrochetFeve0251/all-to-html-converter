@@ -18,6 +18,6 @@ class Mp4Strategy extends Strategy implements StrategyInterface
      */
     public function execute(string $data, string $urlFile): string
     {
-        return '<div><video controls src="' . $urlFile . '">Ici la description alternative</video></div>';
+        return '<div><video controls autoplay loop src="' . $urlFile . '">Ici la description alternative</video></div>';
     }
 }
